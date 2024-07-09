@@ -1,0 +1,168 @@
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-2">
+                <a href="http://13.233.143.252/liberty/" class="footer-logo">
+                    <img class="img-fluid" src="<%= SYSTEM.imagePath+'/logo.png'%>" alt="Logo">
+                </a>
+
+                <p class="footer-info-text">
+                    Lorem ipsum is not simply random text. it has some data in it.
+                </p>
+
+                <ul class="footer-social-links">
+                    <li>
+                        <a href="https://facebook.com"><i class="mdi mdi-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com"><i class="mdi mdi-twitter"></i></a>
+                    </li>
+                    <li><a href="https://linkedin.com"><i class="mdi mdi-linkedin"></i></a></li>
+                    <li><a href="https://instagram.com"><i class="mdi mdi-instagram"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="col-12 col-md">
+                <h4 class="footer-title">Quick Links</h4>
+                <div class="footer-quick-links">
+                    <a href="<%= '/' %>">Home</a>
+                    <a href="<%= '/contact-us' %>">Contact Us</a>
+                    <a href="<%= '/about-us' %>">About Us</a>
+                    <a href="<%= '/legal-notice' %>">Legal Notice</a>
+                    <a href="<%= '/services' %>">Services</a>
+                    <a href="<%= '/terms-conditions' %>">Terms &amp; Conditions</a>
+                    <a href="<%= '/blogs' %>">Blogs</a>
+                    <a href="<%= '/privacy-policy' %>">Privacy Policy</a>
+                    <a href="<%= '/careers' %>">Careers</a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-5">
+                <h4 class="footer-title">Popular Destinations</h4>
+                <div class="footer-popular-destinations">
+                    <% for(let record of SYSTEM.menuData.popularDestination) { %>
+                        <a href="<%= '/destination/'+record.slug %>"><%= record.destination_name %></a>
+                    <% } %> -->
+                </div>
+            </div>
+
+            <!-- <div class="col-12 col-md">
+                <h4 class="footer-title">Contact Info</h4>
+                <div class="footer-contact-info">
+                    <i class="mdi mdi-map-marker"></i>
+                    <a href="https://goo.gl/maps/CzrhEBgzBiSkZCT59" target="_blank">34 Compay Address, NY 11205</a>
+                </div>
+
+                <div class="footer-contact-info">
+                    <i class="mdi mdi-phone"></i>
+                    <a href="tel:9876543210" target="_blank">(987)-654-3210</a>
+                </div>
+
+                <div class="footer-contact-info">
+                    <i class="mdi mdi-email"></i>
+                    <a href="mailto:contact@company.com" target="_blank">contact@company.com</a>
+                </div>
+            </div> -->
+
+            <div class="col-12 col-md-2">
+                <h4 class="footer-title">We are members of</h4>
+
+                <div class="footer-members-link-wrapper">
+                    <a href="" target="_blank" class="footer-members-link">
+                        <img src="https://aaryatravel.com/assets/image/footer-logos/ustoa.png" alt="">
+                    </a>
+
+                    <a href="" target="_blank" class="footer-members-link">
+                        <img src="https://s3.us-east-1.amazonaws.com/fonteva-customer-media/00D0C0000008gNnUAI/WXSpoHHC_ETOA_logo_transparent_background1_png" alt="">
+                    </a>
+
+                    <a href="" target="_blank" class="footer-members-link">
+                        <img src="https://www.liberty-int.com/Public/Liberty16/images/site-logo.png" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <!-- <div class="col-12 col-md-6 col-lg-3">
+                <h4 class="footer-title">Tweeter Feeds</h4>
+
+                <div class="footer-twitter-feed-wrapper">
+                    <a href="#" class="footer-twitter-feed">
+                        <i class="mdi mdi-twitter"></i>
+                        <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nulla erat, tempus et nibh
+                            ut, posuere pretium lacus. Class aptent taciti sociosqu ad litora torquent per conubia.
+                        </span>
+                    </a>
+
+                    <a href="#" class="footer-twitter-feed">
+                        <i class="mdi mdi-twitter"></i>
+                        <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nulla erat, tempus et nibh
+                            ut, posuere pretium lacus. Class aptent taciti sociosqu ad litora torquent per conubia
+                            nostra, per inceptos himenaeos.
+                        </span>
+                    </a>
+
+                    <a href="#" class="footer-twitter-feed">
+                        <i class="mdi mdi-twitter"></i>
+                        <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nulla erat, tempus et nibh
+                            ut, posuere pretium lacus. Class aptent taciti sociosqu ad litora torquent per conubia.
+                        </span>
+                    </a>
+
+
+                    <a href="#" class="footer-twitter-feed">
+                        <i class="mdi mdi-twitter"></i>
+                        <span>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nulla erat, tempus et nibh
+                            ut, posuere pretium lacus. Class aptent taciti sociosqu ad litora torquent per conubia.
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6 col-lg-3">
+                <h4 class="footer-title">Instagram Gallery</h4>
+
+                <div class="footer-instagram-gallery-wrapper">
+                    <a href="#" class="footer-instagram-feed">
+                        <img class="img-fluid" src="https://via.placeholder.com/100" />
+                    </a>
+
+                    <a href="#" class="footer-instagram-feed">
+                        <img class="img-fluid" src="https://via.placeholder.com/100" />
+                    </a>
+
+                    <a href="#" class="footer-instagram-feed">
+                        <img class="img-fluid" src="https://via.placeholder.com/100" />
+                    </a>
+
+                    <a href="#" class="footer-instagram-feed">
+                        <img class="img-fluid" src="https://via.placeholder.com/100" />
+                    </a>
+
+                    <a href="#" class="footer-instagram-feed">
+                        <img class="img-fluid" src="https://via.placeholder.com/100" />
+                    </a>
+
+                    <a href="#" class="footer-instagram-feed">
+                        <img class="img-fluid" src="https://via.placeholder.com/100" />
+                    </a>
+
+                    <a href="#" class="footer-instagram-feed">
+                        <img class="img-fluid" src="https://via.placeholder.com/100" />
+                    </a>
+
+                    <a href="#" class="footer-instagram-feed">
+                        <img class="img-fluid" src="https://via.placeholder.com/100" />
+                    </a>
+
+                    <a href="#" class="footer-instagram-feed">
+                        <img class="img-fluid" src="https://via.placeholder.com/100" />
+                    </a>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,33 @@
+<%- include('../../component/pageBanner',{
+    banner:"https://i.pinimg.com/originals/73/70/00/737000df4b8e04719d38b1b4537ebad2.jpg",
+    banner_size:'cover',
+    title:"Careers"
+}) %>
+
+<section id="careers-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-10 offset-lg-1">
+                <% for(let record of career) { %>
+                    <div class="career-card">
+                        <h4 class="career-card-title"><%= record.name %></h4>
+                        <% if(record.job_location){ %>
+                            <p class="career-card-location">
+                                <i class="mdi mdi-map-marker"></i>
+                                <%= record.job_location %>
+                            </p>
+                        <% } %>
+                        <a class="career-card-link btn btn-primary"
+                            href="<%= record.slug %>">
+                            Learn More
+                        </a>
+                    </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<% LOCALE.cssLink.push(SYSTEM.cssPath+'careers.css'); %>
+<% LOCALE.scriptLink.push(SYSTEM.jsPath+'common.js'); %>

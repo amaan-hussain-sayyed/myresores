@@ -1,0 +1,11 @@
+{
+    "DbConfig": {
+        "database": "todo-db",
+        "username": "root",
+        "password": "",
+        "host": "localhost",
+        "dialect": "mysql"
+    },
+    "port":3001
+
+}

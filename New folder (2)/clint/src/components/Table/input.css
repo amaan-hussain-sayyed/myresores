@@ -1,0 +1,9 @@
+
+
+const Input = ({type, veriaint ,Validation}) => {
+    return (
+        <input />
+    )
+}
+
+export default Input

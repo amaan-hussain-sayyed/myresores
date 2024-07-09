@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <table width="100%" height="100vh" border="0" cellpadding="10px">
+
+        <td align="center"><a href="home.html">
+                <h2>home</h2>
+            </a>
+        </td>
+        <td align="center">
+            <a href="about.html">
+                <h2>about</h2>
+            </a>
+        </td>
+        <td align="center"> <a href="contact.html">
+                <h2>contact</h2>
+            </a></td>
+        <td align="center">
+            <h2> <a href="#">
+                    skill
+                </a></h2>
+        </td>
+        <td align="center">
+            <h2><a href="#">
+                    education
+                </a></h2>
+        </td>
+        <tr>
+
+            <td colspan="5">
+
+                <dl>
+                    <dt>
+                        <h3>
+                            contact
+                        </h3>
+                    </dt>
+
+                    <dd>
+                        <b>mobile no </b> : 8450940955
+                    </dd>
+                    <dt>
+                        <h3>email</h3>
+                    </dt>
+                    <dd>
+                        <b>gamil</b> shayyedamaan@gmail.com
+                    </dd>
+                    <dt>
+                        <h3>linkedin</h3>
+                    </dt>
+                    <dd>
+                        <a href="linkedin.com/in/sayyed-amaan-hussain-2b8364251"
+                            target="_blank">sayyed-amaan-hussain</a>
+                    </dd>
+                    <dt>
+                        <h3>instagram</h3>
+                    </dt>
+                    <dd>
+                        <a href="https://www.instagram.com/amaan_hussain_79a/" target="_blank ">amaan_hussain_79a</a>
+                    </dd>
+
+                </dl>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <h1>for contact</h1>
+            </td>
+        </tr>
+        <form>
+            <tr>
+                <td colspan="2"><label>Name*</label></td>
+                <td colspan="3">
+                    <input type="text" name="firstname" placeholder="first name" required pattern="[A-Za-z]{3,10}"
+                        value="Amaan">
+                    <input type="text" name="lastname" placeholder="last name" required pattern="[A-Za-z]{3,10}"
+                        value="Sayyed">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><label> email*</label></td>
+                <td colspan="3"><input type="email" placeholder="enter your email" name="email" required
+                        value="shayyedamaan@gmail.com"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><label> mobile number*</label></td>
+                <td colspan="3"><input type="tel" placeholder="enter your molie no" name="mobile" pattern="[0-9]{10}"
+                        value="1234567890" required></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label>subject*</label>
+                </td>
+                <td colspan="3"><input type="text" name="title" placeholder="subject" pattern="[A-Z\s]{6,40}"
+                        value="NEED TO FELL THE FORM"></td>
+            </tr>
+            <tr>
+                <td colspan="2" valign="top"><label>query</label></td>
+                <td colspan="3">
+                    <textarea name="query" rows="6" required>enter the details</textarea>
+            </tr>
+            <tr>
+                <td colspan="2"><label>Attachment*</label></td>
+                <td colspan="3"><input type="file" name="document"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><label>priority</label></td>
+                <td colspan="3"><input type="range" name="level" value="0" step="5"></td>
+            </tr>
+            <tr align="center">
+                <td colspan="5"><input type="submit" value="enter"></td>
+            </tr>
+            <tr align="center">
+                <td colspan="5"><input type="submit" value="clear"></td>
+            </tr>
+        </form>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>label in html </title>
+</head>
+
+
+<body>
+
+    <table width="100%" cellpadding="10px">
+        <form method="get">
+            <tr>
+                <td>
+                    <label for="firname">
+                        First Name
+                    </label>
+                </td>
+                <td>
+                    <input type="text" name="firname" placeholder="enter first name" maxlength="10" required>
+                </td>
+            </tr>
+            <tr bgcolor="blue">
+                <td>
+                    <label for="lastname">Last Name</label>
+                </td>
+                <td>
+                    <input type="text" name="lastname" placeholder="enter Last Name" maxlength="10" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="Dob"> Date Of birth</label>
+                </td>
+                <td>
+                    <input type="date" name="Dob">
+                </td>
+            </tr>
+            <tr bgcolor="blue">
+                <td>
+                    <label for="age"> age</label>
+                </td>
+                <td>
+                    <input type="number" name="age" min="18" value="18" required>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="email">Email</label>
+                </td>
+                <td>
+                    <input type="email" name="email" maxlength="18" required placeholder="enter email">
+                </td>
+            </tr>
+            <tr bgcolor="blue">
+                <td>
+                    <label for="password">Password</label>
+                </td>
+                <td>
+                    <input type="password" name="password"
+                        pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}$" required
+                        placeholder="enter password">
+                </td>
+            </tr>
+            <tr>
+                <td valign="top">
+                    <label for="skill">Skill</label>
+                </td>
+                <td>
+                    <input type="checkbox" name="skill" value="HTML"> HTML <br>
+                    <input type="checkbox" name="skill" value="CSS">CSS <br>
+                    <input type="checkbox" name="skill" value="JS"> JS <br>
+                    <input type="checkbox" name="skill" value="REACT.JS"> REACT.JS
+                </td>
+            </tr>
+            <tr bgcolor="#FFC0CB">
+                <td valign="top">
+                    <label for="tecplan">Tech Plan</label>
+                </td>
+                <td>
+                    <input type="radio" name="tecplan" value="FE"> FE <br>
+                    <input type="radio" name="tecplan" value="BE"> BE <br>
+                    <input type="radio" name="tecplan" value="fullstack" checked>fullstack
+                </td>
+            </tr>
+            <tr>
+                <td><label for="profile">Profile pic</label></td>
+                <td>
+                    <input type="file" name="profile">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit">
+                </td>
+                <td>
+                    <input type="reset">
+                </td>
+            </tr>
+        </form>
+    </table>
+</body>
+
+</html>

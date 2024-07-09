@@ -1,0 +1,66 @@
+<header class="sticky-top bg-white shadow">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <img class="img-fluid" src="http://13.233.143.252/liberty//assets/images/logo.png" alt="Logo">
+            </a>
+
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="mdi mdi-menu"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNavigation">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/about-us">About</a>
+                    </li>
+                    <li class="nav-item destination-megamenu dropdown position-static">
+                        <a href="#" class="nav-link dropdown-toggle active" id="destinationNav" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Destinations
+                        </a>
+                        <div class="dropdown-menu w-100 mt-0 shadow-lg" aria-labelledby="destinationNav">
+                            <div class="container">
+                                <div class="row">
+                                        <% for(let region in SYSTEM.menuData.destination) { %>
+                                            <div class="col">
+                                                <div class="destination-megamenu-content">
+                                                    <div class="destination-megamenu-heading">
+                                                        <h4 class="destination-megamenu-title"><%=region%></h4>
+                                                    </div>
+                                                    <div class="destination-megamenu-locations">
+                                                        <% for(let record of SYSTEM.menuData.destination[region]) { %>
+                                                            <a href="<%= '/destination/'+record.slug %>" class="destination-megamenu-link">
+                                                                <%= record.destination_name %>
+                                                            </a>  
+                                                        <% } %>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/service/Sustainability">Sustainability</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/blog">Blogs</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="/contact-us">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-info" style="color:white" href="#">Charity</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>

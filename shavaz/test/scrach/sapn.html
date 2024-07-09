@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td {
+
+            justify-content: space-between;
+            align-content: center;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        #id1 {
+            background-color: rgb(196, 157, 107);
+        }
+
+        #id2 {
+            background-color: rgb(182, 182, 182);
+        }
+
+        #id3 {
+            background-color: antiquewhite;
+        }
+
+        #id4 {
+            background-color: antiquewhite;
+        }
+
+        #id5 {
+            background-color: antiquewhite;
+        }
+
+        #id6 {
+            background-color: antiquewhite;
+        }
+
+        #id7 {
+            background-color: antiquewhite;
+        }
+
+        #id8 {
+            background-color: antiquewhite;
+        }
+
+        #id9 {
+            background-color: rgb(255, 226, 187);
+        }
+
+        #id10 {
+            background-color: rgb(255, 145, 0);
+        }
+    </style>
+</head>
+
+<body style="margin: 0; padding: 0;">
+    <table border="1" style="width: 100%; margin: 0 ;padding:0; height: 100vh;" cellspacing="0">
+        <tr>
+            <td colspan="2" id="id10">colspan1</td>
+            <td id="id1">colspan2</td>
+        </tr>
+        <tr>
+            <td rowspan="2" id="id9">row spal1</td>
+            <td colspan="2" style="vertical-align: top;" id="id4">row spal2</td>
+        </tr>
+        <tr>
+            <td style=" text-align: left;" id="id3">row spal3</td>
+            <td>row spal4</td>
+        </tr>
+        <tr>
+            <td colspan="3" style="text-align: right;">colspan3</td>
+        </tr>
+        <tr>
+            <td>colspan4</td>
+            <td colspan="2">colspan5</td>
+        </tr>
+        <tr>
+            <td>cle</td>
+            <td rowspan="3" id="id3">row span</td>
+            <td id="id5">cell</td>
+        </tr>
+        <tr>
+            <td style="vertical-align: bottom;" id="id7">cle</td>
+
+            <td id="id6">cell</td>
+        </tr>
+        <tr>
+            <td id="id9">cle</td>
+
+            <td id="id10"> cell</td>
+        </tr>
+    </table>
+</body>
+
+</html>

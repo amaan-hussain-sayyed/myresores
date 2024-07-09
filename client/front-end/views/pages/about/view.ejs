@@ -1,0 +1,140 @@
+<!-- <%- include('../../component/pageBanner',{
+    banner:"https://i.pinimg.com/originals/73/70/00/737000df4b8e04719d38b1b4537ebad2.jpg",
+    banner_size:'cover',
+    title:"About Us",
+    description:"The privately owned world-leading DMC Group Founded in 1991, 30+ year expertise Offices established on all continents We cover over 90+ countries worldwide"
+}) %> -->
+<style>
+    #video-player-container{ height: 100vh;position: relative;}
+    .about-video-player-overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(73,73,73,.15);
+    }
+</style>
+<div class="col-12" id="video-player-container">
+    <div class="about-video-player-overlay"></div>
+    <div id="about-video-player"></div>
+</div>
+<section id="about-timeline">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="timeline-section-title">
+                    <span class="text-primary">Welcome to </span>
+                    <span class="text-secondary">Liberty International Tourism Group</span>
+                </h4>
+            </div>
+            <%- include('../../component/timeLine'); %>            
+        </div>
+    </div>
+</section>
+
+<section id="about-management">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="management-section-title">
+                    <span class="text-primary">Management</span>
+                    <span class="text-secondary">Team</span>
+                </h4>
+            </div>
+
+            <%- include('../../component/teamCard'); %>
+        </div>
+    </div>
+</section>
+
+<section id="about-language">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="language-section-title">
+                    <span class="text-primary">75+</span>
+                    <span class="text-secondary">Languages</span>
+                </h4>
+            </div>
+
+            <div class="col-12 col-lg-8 offset-lg-2">
+                <div class="language-content-wrapper">
+                    <h6>Hello </h6>
+                    <h6>Hola </h6>
+                    <h6>Bonjour </h6>
+                    <h6>Hallo </h6>
+                    <h6>Ciao </h6>
+                    <h6>Olá </h6>
+                    <h6>Hei </h6>
+                    <h6>Hej </h6>
+                    <h6>Hei </h6>
+                    <h6>Merhaba </h6>
+                    <h6>Привет </h6>
+                    <h6>你好 </h6>
+                    <h6>안녕하세요 </h6>
+                    <h6>こんにちは </h6>
+                    <h6>ਸਤ ਸੀ੍ ਅਕਾਲ </h6>
+                    <h6>سلام </h6>
+                    <h6>שָׁלוֹם </h6>
+                    <h6>བཀྲ་ཤིས་བདེ་ལེགས། </h6>
+                    <h6>Բարև </h6>
+                    <h6>გამარჯობა </h6>
+                    <h6>नमस्ते </h6>
+                    <h6>سلام </h6>
+                    <h6>ສະບາຍດີ </h6>
+                    <h6>สวัสดี </h6>
+                    <h6>سلام </h6>
+                    <h6>നമസ്കാരം </h6>
+                    <h6>வணக்கம் </h6>
+                    <h6>హలో </h6>
+                    <h6>你好 </h6>
+                    <h6>Здравейте </h6>
+                    <h6>Привіт </h6>
+                    <h6>你好 </h6>
+                    <h6>سلام </h6>
+                    <h6>ಹಲೋ </h6>
+                    <h6>ආයුබෝවන් </h6>
+                    <h6>გამარჯობა </h6>
+                    <h6>مرحباً </h6>
+                    <h6>سلام </h6>
+                    <h6>خوش آمدید </h6>
+                    <h6>હેલો </h6>
+                    <h6>ជំរាបសួរ </h6>
+                    <h6>សួស្តី </h6>
+                    <h6>ບາງດີ </h6>
+                    <h6>سلام </h6>
+                    <h6>سلام </h6>
+                    <h6>ਸਤ ਸ੍ਰੀ ਅਕਾਲ </h6>
+                    <h6>హలో </h6>
+                    <h6>नमस्कार </h6>
+                    <h6>हैलो </h6>
+                    <h6>হ্যালো </h6>
+                    <h6>ନମସ୍କାର </h6>
+                    <h6>more...</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about-team">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="team-section-title">
+                    <span class="text-primary">Our</span>
+                    <span class="text-secondary">Team</span>
+                </h4>
+            </div>
+
+            <%- include('../../component/teamNameCard',{team}); %>
+        </div>
+    </div>
+</section>
+
+
+<% LOCALE.cssLink.push(SYSTEM.cssPath+'about_us.css'); %>
+<% LOCALE.scriptLink.push("https://www.youtube.com/iframe_api"); %>
+<% LOCALE.scriptLink.push(SYSTEM.jsPath+'common.js'); %>
+<% LOCALE.scriptLink.push(SYSTEM.jsPath+'about_us.js'); %>

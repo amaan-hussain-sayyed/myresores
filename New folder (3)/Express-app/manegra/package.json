@@ -1,0 +1,11 @@
+{
+  "name": "manegra",
+  "version": "1.0.0",
+  "description": "bakend api for managing project and and task",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sayyed Amaan Hussain",
+  "license": "ISC"
+}

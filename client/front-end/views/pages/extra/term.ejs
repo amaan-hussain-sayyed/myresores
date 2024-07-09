@@ -1,0 +1,34 @@
+<%- include('../../component/pageBanner',{
+    banner:"https://i.pinimg.com/originals/73/70/00/737000df4b8e04719d38b1b4537ebad2.jpg",
+    banner_size:'cover',
+    title : "Terms &amp; Conditions",
+}) %>
+
+<section id="terms-conditions-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-10 offset-lg-1">
+                <div class="terms-conditions-section">
+                    <a target="_blank"
+                        href="https://www.liberty-int.com/Public/Dokumenty/Terms_and_Conditionsfor_Purchase_and_Sale_Services.pdf?TimeStamp=20210217183413"
+                        class="terms-conditions-section-content">
+                        Terms & Conditions for Purchase & Sale Services</a>
+
+                    <a target="_blank"
+                        href="https://www.liberty-int.com/Public/Dokumenty/Data%20Processing%20Addendum.pdf?TimeStamp=20180601"
+                        class="terms-conditions-section-content">
+                        Data Processing Addendum</a>
+
+                    <a target="_blank"
+                        href="https://www.liberty-int.com/Public/Dokumenty/Terms_and_Conditions_for_Procurement_Services.pdf?TimeStamp=20210217183244"
+                        class="terms-conditions-section-content">
+                        Terms & Conditions for Procurement Services</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<% LOCALE.cssLink.push(SYSTEM.cssPath+'terms_conditions.css'); %>
+<% LOCALE.scriptLink.push(SYSTEM.jsPath+'common.js'); %>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<Style>
+    table {
+        width: 50%;
+    }
+
+    .col {
+        background-color: rgba(0, 161, 51, 0.68);
+        padding: 0;
+
+    }
+</Style>
+
+<body>
+
+    <table border=" 2">
+        <thead>
+            <tr>
+                <td class="col">Id</td>
+                <td>NAME</td>
+                <td class="col">AGE</td>
+                <td>EMAIL</td>
+            </tr>
+        </thead>
+        <tbody id="table-body">
+
+        </tbody>
+        <tfoot>
+
+        </tfoot>
+    </table>
+    <script>
+        function generateRandomData() {
+            var names = ["John", "Jane", "Michael", "Emma", "David", "Sarah"];
+            var domains = ["gmail.com", "yahoo.com", "hotmail.com", "example.com"];
+            var data = "";
+
+            for (let i = 1; i <= 100; i++) {
+                let id = i;
+                let name = names[Math.floor(Math.random() * names.length)];
+                let age = Math.floor(Math.random() * (60 - 18 + 1)) + 18;
+                let domain = domains[Math.floor(Math.random() * domains.length)];
+                let email = name + "@" + domain;
+
+                data += "<tr>";
+                data += "<td class='col'>" + id + "</td>";
+                data += "<td>" + name + "</td>";
+                data += "<td class= 'col'>" + age + "</td>";
+                data += "<td>" + email + "</td>";
+                data += "</tr>";
+            }
+
+            return data;
+        }
+
+        var tableBody = document.getElementById("table-body");
+        tableBody.innerHTML = generateRandomData();
+    </script>
+</body>
+
+</html>

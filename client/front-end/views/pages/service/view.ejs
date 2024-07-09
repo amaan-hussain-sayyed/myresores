@@ -1,0 +1,76 @@
+<%- include('../../component/pageBanner',{
+    banner:service.banner_image,
+    banner_size:'cover',
+    title:service.service_name,
+    description:service.description
+}) %>
+
+
+<div class="service-details-wrapper">
+    <div class="container">
+        <div class="service-details-header">
+            <ul class="nav nav-pills nav-fill">
+                <% let count = 0 %>
+                <% for(let record of item) { %>
+                    <% count = count+1; let classActive = count == 1 ? 'active':'' %>
+                    <li class="nav-item">
+                        <a class="nav-link <%= classActive %>" style="--service-color: 2, 87, 156;" data-bs-toggle="tab" data-bs-target="#section-<%=count%>-content"
+                            type="button" role="tab" aria-controls="section-<%=count%>-tab-pane" aria-selected="true">
+                            <%= record.item_name %>
+                        </a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+        <div class="tab-content">
+            <% let index = 0 %>
+            <% for(let record of item) { %>
+                <% index = index+1; let classSActive = index == 1 ? 'show active':'' %>
+                <div class="tab-pane fade <%= classSActive %>" id="section-<%=index%>-content" role="tabpanel"
+                    aria-labelledby="section-<%=index%>-tab" tabindex="0">
+                    <section id="sevice-details-section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-lg-5 order-0 order-lg-1">
+                                    <div class="section-image-wrapper">
+                                        <img src="<%= record.item_image %>" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-7 order-1 order-lg-0">
+                                    <div class="section-content">
+                                        <h5 class="section-title">
+                                            <%= record.item_name %>
+                                        </h5>
+                                        <div class="section-description">
+                                            <%- record.item_description %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            <% } %>
+        </div>
+
+        <section id="image-gallery">
+            <div class="row">
+                <% for(let record of gallery){ %>
+                    <% if(record) { %>
+                        <div class="col-12 col-lg-3">
+                            <div class="gallery-wrapper">
+                                <img src="<%= record.image %>" alt="<%= record.title %>" />
+                            </div>
+                        </div>
+                    <% } %>
+                <% } %>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+
+<% LOCALE.cssLink.push(SYSTEM.cssPath+'service_details.css'); %>
+<% LOCALE.scriptLink.push(SYSTEM.jsPath+'common.js'); %>
+<% LOCALE.scriptLink.push(SYSTEM.jsPath+'service_details.js'); %>

@@ -1,0 +1,18 @@
+<%- include('../../component/pageBanner',{
+    banner:"https://i.pinimg.com/originals/73/70/00/737000df4b8e04719d38b1b4537ebad2.jpg",
+    banner_size:'cover',
+    subtitle:career.name
+}) %>
+
+<section id="career-details-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-10 offset-lg-1">
+                <%- career.description %>
+            </div>
+        </div>
+    </div>
+</section>
+
+<% LOCALE.cssLink.push(SYSTEM.cssPath+'career_details.css'); %>
+<% LOCALE.scriptLink.push(SYSTEM.jsPath+'common.js'); %>

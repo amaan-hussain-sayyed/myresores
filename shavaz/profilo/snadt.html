@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1" cellpadding="10" width="50%">
+        <form method="get">
+            <tr>
+                <td>
+                    <label>
+                        Gender
+                    </label>
+                </td>
+                <td>
+                    <select name="Gender">
+                        <option value="MALE">Male</option>
+                        <option value="FEMALE ">Female</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>Education</label></td>
+                <td><select name="Education">
+                        <option value="SSC">SSC</option>
+                        <option value="HSC">HSC</option>
+                        <option value="Garduation">Garduation</option>
+                        <option value="PostGraduation">Post graduation</option>
+                        <option value="Diploma">Diploma</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td><label>Nationality</label></td>
+                <td>
+                    <select name="Nationality">
+                        <option value="indian">indian</option>
+                        <option value="nepali">nepali</option>
+                        <option value="japanese">japanese</option>
+                        <option value="korean">korean</option>
+                        <option value="UK">UK</option>
+                        <option value="russian">russian</option>
+                        <option value="USA">USA</option>
+                        <option value="pakistani">pakistani</option>
+                        <option value="kazakistani" selected>kazakistani</option>
+                        <option value="omaan">omaan</option>
+                        <option value="others" contenteditable>write you own</option>
+                    </select>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td><label>hobbise</label></td>
+                <td>
+                    <select name="hobbise" multiple>
+                        <option value="runnig">runnig</option>
+                        <option value="walking ">walking</option>
+                        <option value="singing">singing</option>
+                        <option value="outdoor activite">outdoor activite</option>
+                        <option value=" reading"> reading</option>
+                        <option value="anime">anime</option>
+                        <option value="programming" selected>programming</option>
+                        <option value="streaming">streaming</option>
+                    </select>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td><label>skill</label></td>
+                <td><select name="skill" multiple>
+                        <option value="ms offices">ms offices</option>
+                        <option value="window">window</option>
+                        <option value="linux">linux</option>
+                        <option value="error solving">error solving</option>
+                        <option value="team manegment">team manegment</option>
+                        <option value="gamming">gamming</option>
+                        <option value="sleeping">sleeping</option>
+                        <option value="fighting">fighting</option>
+                        <option value="pen fighting">pen fighting</option>
+                        <option value="ignore">ignore</option>
+                        <option value="others" contenteditable>write you own</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td><label for="tech stack">tech stack</label></td>
+                <td>
+                    <select name="tech stack" multiple="true">
+                        <option value="java">java</option>
+                        <option value="python">python</option>
+                        <option value="c++">c++</option>
+                        <option value="c#">c#</option>
+                        <option value="javascript">javascript</option>
+                        <option value="rust">rust</option>
+                    </select>
+                </td>
+            </tr>
+            <tr valign="top">
+                <td><label>note</label></td>
+                <td><textarea name="note" rows="6">comment</textarea></td>
+            </tr>
+            <tr align="center">
+                <td colspan="2">
+                    <input type="submit" value="enter"><br>
+                    <br>
+                    <input type="reset" value="reset">
+                </td>
+
+            </tr>
+        </form>
+    </table>
+    <div contenteditable style="height: 50vh;  width: 100% ; border:1px solid red; resize: both;">
+        <h1>hello world</h1><br>
+        <p>there is the world</p>
+    </div>
+</body>
+
+</html>

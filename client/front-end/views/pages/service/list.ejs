@@ -1,0 +1,63 @@
+<%- include('../../component/pageBanner',{
+    banner:SYSTEM.imagePath+'/services/client/Services-top-banner-min.jpg',
+    banner_size:'cover',
+    title:'Services',
+}) %>
+
+<section id="services-information">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+                <p>
+                    Welcome to Liberty DMC, your premier destination management company for sustainable, premium leisure
+                    experiences. We specialize in providing top-notch services for sports hospitality, cruise, and
+                    aircraft travel, as
+                    well as MICE (Meetings, Incentives, Conferences, and Exhibitions events.
+                </p>
+
+                <p>
+                    At Liberty DMC, we&#39;re committed to sustainability in everything we do. From eco-friendly
+                    transportation options
+                    to supporting local communities and reducing our environmental impact, we strive to make a positive
+                    difference
+                    in the world. We believe that sustainability isn&#39;t just the responsible choice, it&#39;s also
+                    the smart choice for our
+                    clients who want to enjoy unforgettable experiences while making a positive impact.
+                </p>
+
+                <p>
+                    Our team of expert professionals will work closely with you to create a personalized itinerary that
+                    meets your
+                    unique needs and preferences. Whether you&#39;re looking for an adrenaline-filled sports adventure,
+                    a luxurious
+                    cruise experience, or a memorable MICE event, we&#39;ve got you covered. Our attention to detail and
+                    commitment
+                    to excellence ensures that your experience will exceed your expectations.
+                </p>
+
+                <p>
+                    With Liberty DMC, you can trust that you&#39;re getting the best of the best in premium leisure and
+                    hospitality. We
+                    take pride in offering exceptional service and delivering unforgettable experiences that you&#39;ll
+                    remember for a
+                    lifetime. Contact us today to start planning your next adventure!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="home-services">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <%- include('../../component/services') %>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<% LOCALE.cssLink.push(SYSTEM.cssPath+'services.css'); %>
+<% LOCALE.scriptLink.push(SYSTEM.jsPath+'common.js'); %>
+<% LOCALE.scriptLink.push(SYSTEM.jsPath+'services.js'); %>

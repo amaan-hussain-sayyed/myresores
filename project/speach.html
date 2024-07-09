@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Text to Speech Demo</title>
+</head>
+<style>
+  body {
+    margin: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  #text {
+    padding-top: 10px 10px;
+    max-width: 50%;
+    min-width: 50%;
+    border-radius: 5px;
+    font-size: xx-large;
+    border-color: #000;
+  }
+
+  button {
+    margin: 10px;
+    padding: 10px 40px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(18, 18, 237);
+  }
+</style>
+
+<body>
+  <h1>Text to Speech Demo</h1>
+  <textarea id="text" placeholder="wirte your text" rows="2"></textarea><br>
+  <div>
+    <button id="speak">Speak</button>
+    <button id="cancle">cancel</button>
+    <button id="pause">paused</button>
+    
+  </div>
+
+  <script>
+    const speakButton = document.getElementById('speak');
+    const cancleButton = document.getElementById('cancle');
+    const textInput = document.getElementById('text');
+    const Pause =  document.getElementById('pause');
+    const utterance = new SpeechSynthesisUtterance();
+
+    Pause.addEventListener('click', () => {
+      speechSynthesis.paused()
+
+    });
+ 
+
+
+
+    cancleButton.addEventListener('click', () => {
+      
+      utterance
+    });
+    speakButton.addEventListener('click', () => {
+      utterance.text = textInput.value;
+      speechSynthesis.speak(utterance);
+    });
+  </script>
+</body>
+
+</html>

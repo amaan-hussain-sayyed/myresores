@@ -1,0 +1,156 @@
+#home-why-us {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  #home-why-us::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+  }
+  #home-why-us > * {
+    position: relative;
+    z-index: 2;
+  }
+  #home-why-us .why-us-section-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 3.25rem;
+    margin-bottom: 16px;
+  }
+  #home-why-us .why-us-description {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    margin-bottom: 0px;
+  }
+  #home-why-us .why-us-image {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  #home-why-us .why-us-info-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    position: relative;
+    overflow: hidden;
+    height:280px;
+  }
+  #home-why-us .why-us-info-wrapper:hover .why-us-info-content, #home-why-us .why-us-info-wrapper:focus .why-us-info-content {
+    transform: translateY(0);
+  }
+  #home-why-us .why-us-info-wrapper:hover .why-us-info-hover, #home-why-us .why-us-info-wrapper:focus .why-us-info-hover {
+    z-index: -1;
+    opacity: 0;
+  }
+  #home-why-us .why-us-info-wrapper .why-us-info-content {
+    background-color: #F6941F;
+    padding: 10px;
+    border-radius: 4px;
+    transform: translateY(150%);
+    transition: all 0.3s ease;
+  }
+  #home-why-us .why-us-info-wrapper .why-us-info-content .info-icon {
+    font-size: 2.75rem;
+    color: white;
+    margin-bottom: 12px;
+  }
+  #home-why-us .why-us-info-wrapper .why-us-info-content .info-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: white;
+    margin-bottom: 16px;
+  }
+  #home-why-us .why-us-info-wrapper .why-us-info-content .info-description {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: white;
+    margin-bottom: 0;
+  }
+  #home-why-us .why-us-info-wrapper .why-us-info-hover {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    transition: all 0.4s ease;
+    align-items: center;
+  }
+  #home-why-us .why-us-info-wrapper .why-us-info-hover .why-us-icon {
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    background-color: #0572BA;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    transition: all 0.3s ease-out;
+  }
+  #home-why-us .why-us-info-wrapper .why-us-info-hover .why-us-icon i {
+    font-size: 2.5rem;
+    color: white;
+    transition: all 0.3s ease-out;
+  }
+  #home-why-us .why-us-info-wrapper .why-us-info-hover .why-us-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  @media screen and (max-width: 767px) {
+    #home-why-us {
+      padding-top: 60px;
+      padding-bottom: 60px;
+      background-image: none !important;
+    }
+    #home-why-us .why-us-section-title {
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
+    #home-why-us .why-us-info-wrapper .why-us-info-content {
+      padding: 16px 12px;
+    }
+    #home-why-us .why-us-info-wrapper .why-us-info-content .info-icon {
+      font-size: 2.125rem;
+    }
+    #home-why-us .why-us-info-wrapper .why-us-info-content .info-title {
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      font-size: 1.125rem;
+    }
+    #home-why-us .why-us-info-wrapper .why-us-info-content .info-description {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-size: 1rem;
+    }
+    #home-why-us .why-us-info-wrapper .why-us-info-hover {
+      padding: 16px 12px;
+      top: 0;
+      transform: translateY(0);
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
+  .why-info-tooltip {
+    --bs-tooltip-bg: #494949;
+    --bs-tooltip-font-size: 1rem;
+    --bs-tooltip-font-family: "Montserrat", sans-serif;
+  }

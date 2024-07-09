@@ -1,0 +1,17 @@
+<section id="blogs-tags">
+    <h5 class="blogs-tags-section-title">
+        Tags
+    </h5>
+
+    <div class="blogs-tags-list">
+        <% for(let record of tags){ %>
+            <% record = record.trim(); %>
+            <% if(record){ %>
+                <a href="<%= '/blog?tag='+record %> ">
+                    <i class="mdi mdi-tag"></i>
+                    <%= record %>
+                </a>
+            <% } %>
+        <% } %>
+    </div>
+</section>

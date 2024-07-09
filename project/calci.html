@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,html,h2{
+            margin:0;
+            padding: 0;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background: linear-gradient(45deg,#ffadfa,rgb(177, 130, 198));
+        }
+        #container{
+            border-style: solid;
+            border-radius: 10px;
+            overflow:hidden;
+            position:absolute;
+            display: flex;
+            padding: 2vw;
+            flex-direction: column;
+            width: 30%;
+            background: linear-gradient(45deg,rgb(177, 130, 198),#ffadfa);
+        }
+        input{
+            border-style: solid;
+            border-color: black;
+            overflow:inherit;
+            width: 100%;
+            padding-top:2vw;
+            border-radius: 10px;
+            text-align: right;
+            font-size: 3vw;
+            background-color: rgb(255, 202, 255);
+        }
+        #keys{
+            display: flex;
+            justify-content: space-between;
+            padding-top:2vw;
+        }
+       .number{
+        background-color: rgb(255, 175, 247);
+        border-style:solid;
+        width: 5vw;
+        height: 4vw;
+        font-size: 2vw;
+        border-radius: 10px;
+        cursor: pointer;
+       }
+       .opretore{
+        background-color: rgb(151, 40, 255);
+        border-style:solid;
+        width: 5vw;
+        height: 4vw;
+        font-size: 2vw;
+        border-radius: 10px;
+        cursor: pointer;
+       }
+       .equls{
+        background-color: rgb(94, 0, 181);
+        border-style:solid;
+        width: 5vw;
+        height: 4vw;
+        font-size: 2vw;
+        border-radius: 10px;
+        cursor: pointer;
+       }
+    </style>
+</head>
+<body>
+        <div id="container">
+            <h2>calsus</h2>
+            <div id="answer">
+                <input type="text" placeholder="0" id= "holder" onkeydown="myf(event)">
+            </div>
+            <div id="keys">
+                <button class="opretore">Ac</button>
+                <button class="opretore">DEL</button>
+                <button class="opretore">%</button>
+                <button class="opretore">/</button>
+            </div>
+            <div id="keys">
+                <button class="number">7</button>
+                <button class="number">8</button>
+                <button class="number">9</button>
+                <button class="opretore">*</button>
+            </div>
+            <div id="keys"> 
+                <button class="number">4</button>
+                <button class="number">5</button>
+                <button class="number">6</button>
+                <button class="opretore">+</button>
+            </div>
+            <div id="keys">
+                <button class="number">1</button>
+                <button class="number">2</button>
+                <button class="number">3</button>
+                <button class="opretore">-</button>
+            </div>
+            <div id="keys">
+                <button class="number">0</button>
+                <button class="number">00</button>
+                <button class="number">.</button>
+                <button class ="equls">=</button>
+            </div>
+        </div>
+        <script>
+            let input = document.getElementById('holder');
+            let buttons = document.querySelectorAll('button')
+            let string = ''
+
+            console.log(string)
+
+            let arr = Array.from(buttons)
+            arr.forEach(buttons=>{
+                    buttons.addEventListener('click',(e)=>{
+                      
+                        if(e.target.innerHTML  == '='){
+                            string = eval(string)
+                            input.value = string
+                        }
+                               
+                        else if(e.target.innerHTML == 'Ac'){
+                            string = ''
+                            input.value = string
+
+                        }
+                        else if(e.target.innerHTML == 'DEL'){
+                            string = string.substring(0,string.length-1)
+                            
+                            input.value = string
+                        }
+                       else{
+                         string += e.target.innerHTML
+                         input.value =string
+                       }
+
+                    })
+            })
+        </script>
+</body>
+</html>

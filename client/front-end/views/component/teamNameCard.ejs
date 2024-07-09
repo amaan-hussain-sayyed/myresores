@@ -1,0 +1,16 @@
+<div class="col-12">
+    <div class="team-list">
+        <% if(typeof(team) !== 'undefined'){ %>
+            <% for(let record of team){ %>
+                <% if(record.image){ %>
+                    <h6 data-bs-toggle="tooltip-html" data-bs-custom-class="team-list-item"
+                        data-bs-title="<img src='<%= record.image %>' alt='<%= record.name %>' />">
+                        <%= record.name %>
+                    </h6>
+                <% } else { %>
+                    <h6><%= record.name %></h6>
+                <% } %>
+            <% } %>
+        <% } %>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <% let pageContent = include(renderPath,data) %>
+    <head>
+        <%- include('head') %>
+        <%- include('headLinks') %>
+        <style>
+            header .destination-megamenu .destination-megamenu-content .destination-megamenu-locations{
+                display:inline-block!important;
+            }
+            header .destination-megamenu .destination-megamenu-content .destination-megamenu-locations .destination-megamenu-link{
+                display:inline-block;
+                padding-left:12px;
+            }
+        </style>
+    </head>
+    <body>
+        <% if (renderPath == '../pages/home/index') { %>
+            <%- pageContent %>
+        <% } else { %>
+            <%- include('menu') %>
+            <%- pageContent %>
+        <% } %>
+        <%- include('footer') %>
+        <%- include('footerLinks') %>
+    </body>
+</html>

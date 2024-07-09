@@ -1,0 +1,20 @@
+<div class="col-12">
+    <div class="row">
+        <% for(let row in news){ %>
+            <div class="col-12 col-lg-6">
+                <div class="news-section-card">
+                    <div class="news-section-image-wrapper">
+                        <img src="<%= news[row].banner_image %>" alt="<%= news[row].blog_title %>" class="img-fluid">
+                    </div>
+                    <div class="news-section-info-wrapper">
+                        <h5 class="news-section-title"><%= news[row].blog_title %></h5>
+                        <p class="news-section-description">
+                            <%- news[row].content %>
+                        </p>
+                        <a href="<%= news[row].slug %>" class="btn btn-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        <% } %>  
+    </div>
+</div>

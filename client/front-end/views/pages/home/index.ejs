@@ -1,0 +1,390 @@
+<section id="home-destinations">
+    <div class="owl-carousel owl-theme">
+        <div id="item1" class="item destination-video-item">
+            <div class="destination-video-player-overlay"></div>
+            <div id="destination-video-player"></div>
+        </div>
+        <% let index = 1 %>
+        <% for(let record of banners) { index = index + 1; %>
+            <div id="item<%= index %>" class="item" style="background-image: url('<%= record.url %>')">
+                <h4 class="destination-background-title"><%= record.title %></h4>
+                <div class="destination-title">
+                    <h3 class="destination-heading"><%= record.title %></h3>
+                    <button class="btn btn-primary">Explore Now</button>
+                </div>
+            </div>
+        <% } %>
+    </div>
+    <button id="skip-to-main-content" class="btn btn-lg btn-text btn-skip">
+        <span>Skip to main content</span>
+        <i class="mdi mdi-arrow-top-right"></i>
+    </button>
+</section>
+
+<%- include('../../templates/menu') %>
+
+<section id="home_hero" style="background-image: url('<%= SYSTEM.imagePath+`/home/Search Bar_Monuments.png`;%>')">
+    <div class="container h-100">
+        <div class="row justify-content-center text-center h-100">
+            <div class="col-12 col-lg-10">
+                <h3 class="hero-title">
+                    <img src="<%= SYSTEM.imagePath+'/home/Search Bar_Plane left.png'%>"
+                        class="hero-title-image-before" />
+                    <img src="<%= SYSTEM.imagePath+'/home/Search Bar_Plane Right.png'%>"
+                        class="hero-title-image-after" />
+                    <span class="text-primary">Our</span>
+                    <span class="text-secondary">Destinations</span>
+                </h3>
+                <div class="hero-stats-wrapper">
+                    <div class="hero-stats">
+                        <span class="stats-number">30+</span>
+                        <span class="stats-text">Years</span>
+                    </div>
+
+                    <div class="hero-stats">
+                        <span class="stats-number">100+</span>
+                        <span class="stats-text">Destinations</span>
+                    </div>
+
+                    <div class="hero-stats">
+                        <span class="stats-number">1000+</span>
+                        <span class="stats-text">MICE Events</span>
+                    </div>
+
+                    <div class="hero-stats">
+                        <span class="stats-number">5000+</span>
+                        <span class="stats-text">Leisure Group & FIT</span>
+                    </div>
+                </div>
+
+                <div class="hero-searchbox">
+                    <div class="custom-search-wrapper">
+                        <div class="custom-search-field">
+                            <input type="text" placeholder="Search for..." class="custom-search-input" />
+                            <i class="mdi mdi-magnify custom-search-icon"></i>
+                        </div>
+                        <div class="custom-search-result-wrapper shadow">
+                            <% for(let region in SYSTEM.menuData.destination) { %>
+                                <% for(let record of SYSTEM.menuData.destination[region]) { %>
+                                    <a href="<%= '/destination/'+record.slug %>" class="custom-search-result-row">
+                                        <%= record.destination_name %>
+                                    </a>
+                                <% } %>
+                            <% } %>
+                            <!-- <a href="" class="custom-search-result-row">
+                                Greece
+                            </a>
+                            <a href="" class="custom-search-result-row">
+                                Italy
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="home-services">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="services-section-title">
+                    <span class="text-primary">Our</span>
+                    <span class="text-secondary">Services</span>
+                </h4>
+
+                <%- include('../../component/services') %>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="home-why-us" style="background-image: url('<%= SYSTEM.imagePath+`/map_blue.jpg`; %>')">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-11 offset-lg-1">
+                <h4 class="why-us-section-title">
+                    <span class="text-primary">Why</span>
+                    <span class="text-secondary">Us</span>
+                </h4>
+                <p class="why-us-description">
+                    Liberty International Tourism Group is the largest privately owned Destination Management Company
+                    (DMC) delivering professional services with our knowledge, expertise, and resources, working in the
+                    design and implementation or events, activities, tours, transportation, program logistics, and more
+                    and perfecting its services over 32+ years already.
+                </p>
+
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="why-us-info-wrapper">
+                            <div class="why-us-info-content">
+                                <i class="info-icon mdi mdi-key-chain"></i>
+                                <h6 class="info-title">Ownership concept</h6>
+                                <p class="info-description">
+                                    With 95% of our offices worldwide operating on an ownership model and the rest on franchise, we differentiate ourselves from other DMCs, showcasing our commitment to personalized and dedicated service for our clients.
+                                </p>
+                            </div>
+
+                            <div class="why-us-info-hover">
+                                <div class="why-us-icon">
+                                    <i class="mdi mdi-key-chain"></i>
+                                </div>
+                                <p class="why-us-title">Ownership concept</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="why-us-info-wrapper">
+                            <div class="why-us-info-content">
+                                <i class="info-icon mdi mdi-shield-key"></i>
+                                <h6 class="info-title">30+ years</h6>
+                                <p class="info-description">
+                                    With over 30 years of industry experience, our expertise and knowledge are unmatched, providing unparalleled service and solutions.
+                                </p>
+                            </div>
+
+                            <div class="why-us-info-hover">
+                                <div class="why-us-icon">
+                                    <i class="mdi mdi-shield-key"></i>
+                                </div>
+                                <p class="why-us-title">30+ years</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="why-us-info-wrapper">
+                            <div class="why-us-info-content">
+                                <i class="info-icon mdi mdi-handshake"></i>
+                                <h6 class="info-title">100+ destinations</h6>
+                                <p class="info-description">
+                                    Covering 100+ destinations worldwide, our extensive network allows us to offer a global reach with local expertise, making us your trusted partner wherever you go.
+                                </p>
+                            </div>
+
+                            <div class="why-us-info-hover">
+                                <div class="why-us-icon">
+                                    <i class="mdi mdi-handshake"></i>
+                                </div>
+                                <p class="why-us-title">100+ destinations</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="why-us-info-wrapper">
+                            <div class="why-us-info-content">
+                                <i class="info-icon mdi mdi-handshake"></i>
+                                <h6 class="info-title">Financial Stability</h6>
+                                <p class="info-description">
+                                    Our strong financial stability ensures peace of mind for our clients, knowing that we are a reliable and trustworthy partner for all their destination management needs.
+                                </p>
+                            </div>
+
+                            <div class="why-us-info-hover">
+                                <div class="why-us-icon">
+                                    <i class="mdi mdi-handshake"></i>
+                                </div>
+                                <p class="why-us-title">Financial Stability</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="why-us-info-wrapper">
+                            <div class="why-us-info-content">
+                                <i class="info-icon mdi mdi-map-marker"></i>
+                                <h6 class="info-title">Sustainability mindset & focus</h6>
+                                <p class="info-description">
+                                    As a sustainability-minded company, we prioritize eco-friendly practices, promoting responsible tourism and contributing to the preservation of our planet.
+                                </p>
+                            </div>
+
+                            <div class="why-us-info-hover">
+                                <div class="why-us-icon">
+                                    <i class="mdi mdi-map-marker"></i>
+                                </div>
+                                <p class="why-us-title">Sustainability mindset & focus</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="why-us-info-wrapper">
+                            <div class="why-us-info-content">
+                                <i class="info-icon mdi mdi-account-group"></i>
+                                <h6 class="info-title">Service diversification</h6>
+                                <p class="info-description">
+                                    We offer a wide range of services beyond traditional destination management, including MICE (Meetings, Incentives, Conferences, and Exhibitions), Premium Leisure (Leisure groups, FIT,  Special Interests Travelers/Groups), sports hospitality, virtual and hybrid events, aircraft services, and river cruises.
+                                </p>
+                            </div>
+
+                            <div class="why-us-info-hover">
+                                <div class="why-us-icon">
+                                    <i class="mdi mdi-account-group"></i>
+                                </div>
+                                <p class="why-us-title">Service diversification</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="why-us-info-wrapper">
+                            <div class="why-us-info-content">
+                                <i class="info-icon mdi mdi-seal"></i>
+                                <h6 class="info-title">Quality control department</h6>
+                                <p class="info-description">
+                                    Our dedicated quality control department ensures strict adherence to quality standards, guaranteeing the highest level of service and customer satisfaction.
+                                </p>
+                            </div>
+
+                            <div class="why-us-info-hover">
+                                <div class="why-us-icon">
+                                    <i class="mdi mdi-seal"></i>
+                                </div>
+                                <p class="why-us-title">Quality control department</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="why-us-info-wrapper">
+                            <div class="why-us-info-content">
+                                <i class="info-icon mdi mdi-certificate"></i>
+                                <h6 class="info-title">Privately owned</h6>
+                                <p class="info-description">
+                                    As a privately owned company, we are committed to maintaining our independence, allowing us to be agile and flexible in meeting our clients' unique requirements.
+                                </p>
+                            </div>
+
+                            <div class="why-us-info-hover">
+                                <div class="why-us-icon">
+                                    <i class="mdi mdi-certificate"></i>
+                                </div>
+                                <p class="why-us-title">Privately owned</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="col-12 col-lg-3 d-none d-lg-block">
+                <div class="why-us-image">
+                    <img class="img-fluid" src="<?php echo IMAGES_PATH.'/why_us.jpg' ?>" alt="why us sidebar" />
+                </div>
+            </div> -->
+        </div>
+    </div>
+</section>
+
+<section id="home-blogs"
+    style="background-image: url('<%= SYSTEM.imagePath+`background/home/blogs_background.png` %>') ">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="blogs-section-title">
+                    <span class="text-secondary">Blogs</span>
+                </h4>
+            </div>
+
+            <%- include('../../component/blog') %>
+        </div>
+    </div>
+</section>
+
+<%- include('../../component/travelForm') %>
+
+<!-- <section id="home-video">
+    <div class="container-fluid h-100 p-0">
+        <div class="row h-100 align-items-center justify-content-center">
+            <div class="col-12 h-100">
+                <div class="home-video-player-overlay"></div>
+                <div id="home-video-player"></div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<section id="home-news-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h4 class="news-section-title">
+                    <span class="text-primary">Liberty</span>
+                    <span class="text-secondary">News</span>
+                </h4>
+            </div>
+            <%- include('../../component/news') %>
+        </div>
+    </div>
+</section>
+
+<section id="home-social-feeds">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <h4 class="social-feeds-section-title">
+                    <span class="text-primary">Social</span>
+                    <span class="text-secondary">Feeds</span>
+                </h4>
+            </div>
+
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 col-lg-4">
+                        <a class="twitter-timeline" data-height="420"
+                            href="https://twitter.com/liberty_itg?ref_src=twsrc%5Etfw">Tweets by liberty_itg</a>
+                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>
+
+                    <div class="col-12 col-lg-5">
+                        <iframe width="100%" height="420" style="border-radius: 12px;"
+                            src="https://www.youtube.com/embed?listType=playlist&list=PLto44cDLogVSPQqDMLiT3Qd5ht5iWhkHZ"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; playsinline; modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+
+                    <div class="col-12 col-lg-3">
+                        <iframe
+                            src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FLibertyInternationalTourismGroup%2F&tabs=timeline%2Cevents&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=false&appId"
+                            width="100%" height="420" style="border:none;overflow:hidden;border-radius: 12px;"
+                            scrolling="no" frameborder="0" allowfullscreen="true"
+                            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    #home_hero .hero-title .hero-title-image-before{
+        max-width: 300px;
+        left: 88px;
+        top: -68px;
+    }
+    #home_hero .hero-title .hero-title-image-after{
+        top:-31px;
+    }
+    #home_hero .hero-stats-wrapper .hero-stats .stats-number{
+        color: #f69420;
+    }
+    /* #home_hero .hero-stats-wrapper .hero-stats{
+        padding-left: 10px;
+        padding-right: 10px;
+    } */
+    #home_hero .hero-stats-wrapper .hero-stats .stats-text{
+        white-space: nowrap;
+    }
+    #home_hero .hero-title{
+        margin-top: 145px;
+    }
+</style>
+<% LOCALE.cssLink.push(SYSTEM.cssPath+'home.css'); %>
+<% LOCALE.cssLink.push(SYSTEM.cssPath+'home-whyus.css'); %>
+<% LOCALE.scriptLink.push('https://www.youtube.com/iframe_api'); %>
+<% LOCALE.scriptLink.push('js/common.js'); %>
+<% LOCALE.scriptLink.push('js/home.js'); %>

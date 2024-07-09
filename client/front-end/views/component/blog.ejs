@@ -1,0 +1,31 @@
+<div class="col-12">
+    <div class="owl-carousel owl-theme">
+        <% for(let row in blog){ %>
+            <div class="item">
+                <div class="blog-card">
+                    <div class="blog-card-image">
+                        <img class="img-fluid" src="<%= blog[row].banner_image %>" alt="<%= blog[row].blog_title %>"/>
+                    </div>
+    
+                    <div class="blog-card-content">
+                        <div class="blog-card-date-wrapper">
+                            <p class="blog-card-date">02</p>
+                            <p class="blog-card-month">Jan</p>
+                        </div>
+                        <h4 class="blog-card-title">
+                            <%= blog[row].blog_title %>
+                        </h4>
+                        <p class="blog-card-author"><%= blog[row].created_by %></p>
+    
+                        <div class="blog-card-text">
+                            <%- blog[row].content %>
+                        </div>
+    
+                        <a href="<%= blog[row].slug %>" class="btn btn-outline-primary">Read More</a>
+                    </div>
+    
+                </div>
+            </div>
+        <% } %>
+    </div>
+</div>

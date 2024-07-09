@@ -1,0 +1,21 @@
+<section id="page-hero" style="background-image: url('<%= banner %>'); background-size: '<%= banner_size %>'">
+    <div class="container">
+        <% if (typeof(title) !== 'undefined') { %>
+            <h1 class="hero-title">
+                <%= title %>
+            </h1>
+        <% } %>
+
+        <% if (typeof(subtitle) !== 'undefined') { %>
+            <h4 class="hero-subtitle">
+                <%= subtitle %>
+            </h4>
+        <% } %>
+
+        <% if (typeof(description) !== 'undefined') { %>
+            <p class="hero-description">
+                <%= description %>
+            </p>
+        <% } %>
+    </div>
+</section>

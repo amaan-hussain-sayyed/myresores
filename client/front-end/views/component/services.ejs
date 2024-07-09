@@ -1,0 +1,71 @@
+<div class="row">
+    <div class="col-12 col-lg-4">
+        <a target="_blank" href="<%= services[0].slug %>" class="services-card"
+            style="height: calc(100% - 24px); background-image: url('<%= services[0].banner_image %>');">
+            <div class="services-card-content-background" style="--service-color: <%= services[0].color %>;">
+            </div>
+            <div class="services-card-content">
+                <h3 class="services-title"><%= services[0].service_name %></h3>
+                <p class="services-description">
+                    <%= services[0].description %>
+                </p>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-12 col-lg-8">
+        <div class="row">
+            <div class="col-12 col-lg-12">
+                <a target="_blank" href="<%= services[1].slug %>" class="services-card"
+                    style="background-image: url('<%= services[1].banner_image %>');">
+                    <div class="services-card-content-background"
+                        style="--service-color: <%= services[1].color %>;">
+                    </div>
+                    <div class="services-card-content">
+                        <h3 class="services-title"><%= services[1].service_name %></h3>
+                        <p class="services-description">
+                            <%= services[1].description %>
+                        </p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-12 col-lg-12">
+                <a target="_blank" href="<%= services[2].slug %>" class="services-card"
+                    style="height: calc(100% - 24px); background-image: url('<%= services[2].banner_image %>');">
+                    <div class="services-card-content-background" style="--service-color: <%= services[2].color %>;">
+                    </div>
+                    <div class="services-card-content">
+                        <h3 class="services-title"><%= services[2].service_name %></h3>
+                        <p class="services-description">
+                            <%= services[2].description %>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="col-12">
+        <div class="row">
+            <% for(let row in services) { %>
+                <% if(row > 2){ %>
+                    <div class="col-12 col-lg-3">
+                        <a target="_blank" href="<%= services[row].slug %>" class="services-card"
+                            style="background-image: url('<%= services[row].banner_image %>');">
+                            <div class="services-card-content-background" style="--service-color: <%= services[row].color %>;">
+                            </div>
+                            <div class="services-card-content">
+                                <h3 class="services-title"><%= services[row].service_name %></h3>
+                                <p class="services-description">
+                                    <%= services[row].description %>
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                <% } %>
+            <% } %>
+        </div>
+    </div>
+</div>

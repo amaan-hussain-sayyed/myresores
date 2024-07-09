@@ -1,0 +1,235 @@
+<%- include('../../component/pageBanner',{
+    banner:des.banner_image,
+    banner_size:'cover',
+    title:des.destination_name
+}) %>
+
+<section id="destination-details-carousel">
+    <div class="owl-carousel owl-theme">
+        <% for(let row in gallery){ %> 
+            <div class="item">
+                <img src="<%= gallery[row].url %>" alt="<%= gallery[row].title %>">
+            </div>
+        <% } %>
+    </div>
+</section>
+
+<div class="destination-details-wrapper">
+    <div class="container">
+        <div class="row">
+            <!-- main content -->
+            <div class="col-12 col-lg-9">
+                <div class="desination-details-header">
+                    <ul class="nav nav-tabs nav-fill">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-bs-toggle="tab"
+                                data-bs-target="#about-destination-content" type="button" role="tab"
+                                aria-controls="about-destination-tab-pane" aria-selected="true">About
+                                Destination</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#reasons-to-visit-content"
+                                type="button" role="tab" aria-controls="reasons-to-visit-tab-pane"
+                                aria-selected="true">Reasons to Visit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#destination-guide-content"
+                                type="button" role="tab" aria-controls="destination-guide-tab-pane"
+                                aria-selected="true">Destination Guide</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#why-us-content" type="button"
+                                role="tab" aria-controls="why-us-tab-pane" aria-selected="true">Why Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#video-gallery-content"
+                                type="button" role="tab" aria-controls="video-gallery-tab-pane"
+                                aria-selected="true">Video Gallery</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="about-destination-content" role="tabpanel"
+                        aria-labelledby="about-destination-tab" tabindex="0">
+                        <div class="destination-details-content">
+                            <%- des.about_the_destination %>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="reasons-to-visit-content" role="tabpanel"
+                        aria-labelledby="reasons-to-visit-tab" tabindex="0">
+                        <section id="destination-details-reason">
+                            <div class="row">
+                                <div class="col-12">
+                                    <!-- <h4 class="reason-section-title">
+                                        <span class="text-primary">Reasons to visit</span>
+                                        <span class="text-secondary">Albania</span>
+                                    </h4> -->
+                                    <ul class="reason-list list-unstyled">
+                                        <% for(let row in des.visit_reason) { %>
+                                            <li class="reason-list-item">
+                                                <i class="mdi mdi-arrow-right-bold-hexagon-outline"></i>
+                                                <span>
+                                                    <%= des.visit_reason[row] %>
+                                                </span>
+                                            </li>
+                                        <% } %>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="tab-pane fade" id="destination-guide-content" role="tabpanel"
+                        aria-labelledby="destination-guide-tab" tabindex="0">
+                        <section id="destination-details-guide">
+                            <div class="row">
+                                <div class="col-12">
+                                    <!-- <h4 class="guide-section-title">
+                                        <span class="text-primary">Guide For</span>
+                                        <span class="text-secondary">Albania</span>
+                                    </h4> -->
+                                    <div class="guide-table table-responsive">
+                                        <table class="table table-hover table-striped">
+                                            <tbody>
+                                                <% for(let row in des.destination_guide){ %>
+                                                    <% if(des.destination_guide[row].trim()) { %>
+                                                        <% let temp = des.destination_guide[row].split(":") %>
+                                                        <tr>
+                                                            <th><%= temp[0] %></th>
+                                                            <td><%= temp[1] %></td>
+                                                        </tr>
+                                                    <% } %>
+                                                <% } %>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="tab-pane fade" id="why-us-content" role="tabpanel" aria-labelledby="why-us-tab"
+                        tabindex="0">
+                        <section id="destination-details-why-us">
+                            <div class="row">
+                                <div class="col-12">
+                                    <!-- <h4 class="why-us-section-title">
+                                        <span class="text-primary">Why</span>
+                                        <span class="text-secondary">Us</span>
+                                    </h4> -->
+                                    <p class="why-us-description">
+                                        <%- des.why_choose_us %>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
+                    <div class="tab-pane fade" id="video-gallery-content" role="tabpanel"
+                        aria-labelledby="video-gallery-tab" tabindex="0">
+                        <section id="video-gallery">
+                            <div class="row">
+                                <div class="col-12 col-lg-12">
+                                    <div class="gallery-wrapper">
+                                        <video width="100%" controls>
+                                            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                                            <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                                            Your browser does not support HTML video.
+                                        </video>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+
+            <!-- aside -->
+            <div class="col-12 col-lg-3">
+                <aside class="destination-details-sidebar">
+                    <section id="destination-details-contact">
+                        <% if(office && office.Name) { %>
+                            <div class="contact-card">
+                                <div class="contact-card-image">
+                                    <img src="https://cached.imagescaler.hbpl.co.uk/resize/scaleWidth/952/cached.offlinehbpl.hbpl.co.uk/news/ORP/B4034D5B-B9CD-0FDA-A4A4B94A79E70949.jpg" />
+                                </div>
+                        
+                                <div class="contact-card-content">
+                                    <h5 class="contact-card-title"><%= office.Name %></h5>
+                                    <p class="contact-card-subtitle">CEO <%= des.destination_name %></p>
+                                    <% if(office.gmail){ %>
+                                        <div class="contact-card-link">
+                                            <i class="mdi mdi-email-outline"></i>
+                                            <a href="mailto:<%= office.gmail %>" target="_blank" class="contact-card-link">
+                                                <%= office.gmail %>
+                                            </a>
+                                        </div>
+                                    <% } %>
+                                    <% if(office.gmail){ %>
+                                        <div class="contact-card-link">
+                                            <i class="mdi mdi-phone"></i>
+                                            <a href="tel:<%= office.telephone_no %>" target="_blank" class="contact-card-link">
+                                                <%= office.telephone_no %>
+                                            </a>
+                                        </div>
+                                    <% } %>
+                                    <% if(office.gmail){ %>
+                                        <div class="contact-card-link">
+                                            <i class="mdi mdi-map-marker"></i>
+                                            <a href="https://maps.google.com" target="_blank" class="contact-card-link">
+                                                <%= office.address %>
+                                            </a>
+                                        </div>
+                                    <% } %>
+                        
+                                    <div class="contact-social-links">
+                                        
+                                        <% if(office.facebook){ %>
+                                            <a href="https://facebook.com" target="_blank">
+                                                <i class="mdi mdi-facebook"></i>
+                                            </a>
+                                        <% } %>
+                                        <% if(office.twitter){ %>
+                                            <a href="https://twitter.com" target="_blank">
+                                                <i class="mdi mdi-twitter"></i>
+                                            </a>
+                                        <% } %>
+                                        <% if(office.instagram){ %>
+                                            <a href="https://instagram.com" target="_blank">
+                                                <i class="mdi mdi-instagram"></i>
+                                            </a>
+                                        <% } %>
+                                        <% if(office.linkedIN){ %>
+                                            <a href="https://linkedin.com" target="_blank">
+                                                <i class="mdi mdi-linkedin"></i>
+                                            </a>
+                                        <% } %>
+                                    </div>
+                                </div>
+                            </div>
+                        <% } %>
+                    
+                        <div class="contact-locations-covered">
+                            <h5 class="contact-locations-title">Destinations Covered</h5>
+                            <div class="contact-locations-list">
+                                <span>Location One</span>
+                                <span>Location Two</span>
+                                <span>Location Three</span>
+                                <span>Location Four</span>
+                                <span>Location Five</span>
+                                <span>Location Six</span>
+                                <span>Location Seven</span>
+                            </div>
+                        </div>
+                    </section>
+                </aside>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<% LOCALE.cssLink.push(SYSTEM.cssPath+'destination_details.css'); %>
+<% LOCALE.scriptLink.push(SYSTEM.jsPath+'common.js'); %>
+<% LOCALE.scriptLink.push(SYSTEM.jsPath+'destination_details.js'); %>

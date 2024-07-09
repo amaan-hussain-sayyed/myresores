@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Timer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Simple Timer</h1>
+    <div>
+        <p id="timer">00:00:00</p>
+        <button onclick="startTimer()">Start</button>
+        <button onclick="stopTimer()">Stop</button>
+        <button onclick="resetTimer()">Reset</button>
+    </div>
+
+    <script>
+        let timerInterval;
+        let seconds = 0;
+        let minutes = 0;
+        let hours = 0;
+
+
+        function startTimer() {
+            clearInterval(timerInterval);
+
+            timerInterval = setInterval(updateTimer, 1000);
+
+        }
+
+        function stopTimer() {
+            clearInterval(timerInterval);
+        }
+
+        function resetTimer() {
+            stopTimer();
+            seconds = 0;
+            minutes = 0;
+            hours = 0;
+            updateTimer();
+        }
+
+        function updateTimer() {
+            seconds++;
+            if (seconds % 10 == 0) {
+                alert("hello world hi the 10 second is completed")
+            }
+            if (seconds === 60) {
+                seconds = 0;
+                minutes++;
+            }
+            if (minutes === 60) {
+                minutes = 0;
+                hours++;
+            }
+
+            const formattedTime = `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+            document.getElementById("timer").innerText = formattedTime;
+        }
+
+        function pad(value) {
+            return value.toString().padStart(2, '0');
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<%- include('../../component/pageBanner',{
+    banner:blog.banner_image,
+    banner_size:'cover',
+    subtitle:blog.blog_title,
+}) %>
+
+<div class="container blog-details-container">
+    <div class="row">
+        <div class="col-12 col-lg-9">
+            <div class="blog-details-content-wrapper">
+
+                <div class="blog-card-date-wrapper">
+                    <p class="blog-card-date"><%= blog.createdAt[0] %></p>
+                    <p class="blog-card-month"><%= blog.createdAt[1] %></p>
+                </div>
+
+                <div class="blog-details-content">
+                    <%- blog.content %>
+                </div>
+
+                <!-- <div class="row w-100">
+                    <div class="col">
+                        <ul class="blog-card-tags">
+                            <li>
+                                <a href="<?php echo BASE_URL . '/blog-details.php' ?>">
+                                    <i class="mdi mdi-tag"></i>
+                                    Holidays
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-auto">
+                        <ul class="blog-card-social-links">
+                            <li>
+                                <a target="_blank"
+                                    href="https://www.facebook.com/sharer.php?u=https://css-tricks.com"><i
+                                        class="mdi mdi-facebook"></i></a>
+                            </li>
+                            <li>
+                                <a target="_blank"
+                                    href="https://twitter.com/intent/tweet?url=https://css-tricks.com&text=Some blog text"><i
+                                        class="mdi mdi-twitter"></i></a>
+                            </li>
+                            <li><a target="_blank"
+                                    href="https://www.linkedin.com/sharing/share-offsite/?url=https://css-tricks.com"><i
+                                        class="mdi mdi-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-3">
+            <div class="blogs-sidebar">
+                <%- include('../../component/latestBlogs',{blogs:recentBlog}) %>
+                <%- include('../../component/blogTags',{tags:blog.tag}) %>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% LOCALE.cssLink.push(SYSTEM.cssPath+'blog_details.css'); %>
+<% LOCALE.scriptLink.push(SYSTEM.jsPath+'common.js'); %>
+<% LOCALE.scriptLink.push(SYSTEM.jsPath+'blog_details.js'); %>

@@ -1,0 +1,19 @@
+<section id="latest-blogs">
+    <h5 class="latest-blog-section-title">
+        Latest Blogs
+    </h5>
+
+    <div class="latest-blogs-list">
+        <% for(let record of blogs) { %>
+            <a href="<%= record.slug %>" class="latest-blogs-card">
+                <div class="latest-blogs-card-image">
+                    <img src="<%= record.banner_image %>" alt="<%= record.blog_title %>" />
+                </div>
+                <div class="latest-blogs-card-content">
+                    <h5 class="latest-blogs-card-title"><%= record.blog_title %></h5>
+                    <p class="latest-blogs-card-date"><%= record.createdAt %></p>
+                </div>
+            </a>
+        <% } %>
+    </div>
+</section>

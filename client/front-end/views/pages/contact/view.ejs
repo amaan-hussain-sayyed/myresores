@@ -1,0 +1,57 @@
+<%- include('../../component/pageBanner',{
+    banner:"https://i.pinimg.com/originals/73/70/00/737000df4b8e04719d38b1b4537ebad2.jpg",
+    banner_size:'cover',
+    title:"Liberty offices worldwide",
+}) %>
+
+<section id="contact-us-container">
+    <div class="container">
+        <div class="contact-info-header">
+            <ul class="nav nav-pills justify-content-center">
+                <% for(let row in office) { %>
+                    <li class="nav-item">
+                        <a href="#contact-info-<%= row %>" class="nav-link"><%= row %></a>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+
+        <% for(let row in office) { %>
+            <section id="contact-info-europe">
+                <h5 class="contact-info-section-title"><%= row %></h5>
+                <div class="row contact-info-wrapper">
+                    <% for(let record of office[row]) { %> 
+                        <% if(record.destination_name) { %>
+                            <div class="col-12 col-md-4 col-lg-3">
+                                <div class="contact-info-card">
+                                    <a href="<%= record.slug %>" class="contact-info-heading">
+                                        <%= record.destination_name %>
+                                    </a>
+                                    <a target="_blank"
+                                        href="http://maps.google.com/?q=<%= record.address %>"
+                                        class="contact-info-location">
+                                        <i class="mdi mdi-map-marker"></i>
+                                        <%= record.address %>
+                                    </a>
+                                    <a target="_blank" href="tel:<%= record.telephone_no %>" class="contact-info-mobile-number">
+                                        <i class="mdi mdi-phone"></i>
+                                        <%= record.telephone_no %>
+                                    </a>
+                                    <a target="_blank" href="mailto:<%= record.gmail %>" class="contact-info-email">
+                                        <i class="mdi mdi-email"></i>
+                                        <%= record.gmail %>
+                                    </a>
+                                </div>
+                            </div>
+                        <% } %>
+                    <% } %>
+                </div>
+            </section>
+        <% } %>
+    </div>
+</section>
+
+
+<% LOCALE.cssLink.push(SYSTEM.cssPath+'contact_us.css'); %>
+<% LOCALE.scriptLink.push(SYSTEM.jsPath+'common.js'); %>
+<% LOCALE.scriptLink.push(SYSTEM.jsPath+'contact_us.js'); %>

@@ -1,0 +1,80 @@
+<%- include('../../component/pageBanner',{
+    banner:'https://i.pinimg.com/originals/73/70/00/737000df4b8e04719d38b1b4537ebad2.jpg',
+    banner_size:'cover',
+    title:'Blogs',
+    description:'The privately owned world-leading DMC Group Founded in 1991, 30+ year expertise Offices established on all continents We cover over 90+ countries worldwide'
+}) %>
+
+<div class="container blogs-container">
+    <div class="row">
+        <div class="col-12 col-lg-9">
+            <div class="blogs-list-wrapper">
+                <div class="row">
+                    <% for(let records of blogs) { %>
+                        <div class="col-12">
+                            <div class="blog-card-horizontal">
+                                <a href="<%= records.slug %>" class="blog-card-image">
+                                    <img class="img-fluid" src="<%= records.banner_image %>" alt="<%= records.blog_title %>">
+                                </a>
+                                <div class="blog-card-content">
+                                    <div class="blog-card-date-wrapper">
+                                        <p class="blog-card-date"><%= records.createdAt[0] %></p>
+                                        <p class="blog-card-month"><%= records.createdAt[1] %></p>
+                                    </div>
+                                    <div class="blog-card-content-wrapper">
+                                        <a href="<%= records.slug %>" class="blog-card-title">
+                                            <%= records.blog_title %>
+                                        </a>
+                                        <p class="blog-card-text">
+                                            <%- records.content %>
+                                        </p>
+                                        <div class="row w-100">
+                                            <div class="col">
+                                                <ul class="blog-card-tags">
+                                                    <% for(let tag of records.tag) { %>
+                                                        <% tag = tag.trim(); %>
+                                                        <% if(tag){ %>
+                                                            <li>
+                                                                <a href="<%= tag %>">
+                                                                    <i class="mdi mdi-tag"></i>
+                                                                    <%= tag %>
+                                                                </a>
+                                                            </li>
+                                                        <% } %>
+                                                    <% } %>
+                                                </ul>
+                                            </div>
+                                            <div class="col-auto">
+                                                <ul class="blog-card-social-links">
+                                                    <li>
+                                                        <a target="_blank" href="https://www.facebook.com/sharer.php?u=https://css-tricks.com"><i class="mdi mdi-facebook"></i></a>
+                                                    </li>
+                                                    <li>
+                                                        <a target="_blank" href="https://twitter.com/intent/tweet?url=https://css-tricks.com&text=Some blog text"><i class="mdi mdi-twitter"></i></a>
+                                                    </li>
+                                                    <li><a target="_blank" href="https://www.linkedin.com/sharing/share-offsite/?url=https://css-tricks.com"><i class="mdi mdi-linkedin"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-3">
+            <div class="blogs-sidebar">
+                <%- include('../../component/latestBlogs',{blogs:recentBlog}) %>
+                <%- include('../../component/blogTags',{tags:tags}) %>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<% LOCALE.cssLink.push(SYSTEM.cssPath+'blogs.css'); %>
+<% LOCALE.scriptLink.push(SYSTEM.jsPath+'common.js'); %>
+<% LOCALE.scriptLink.push(SYSTEM.jsPath+'blogs.js'); %>

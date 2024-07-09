@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EduWize Institution - Login</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .container {
+            background-color: #fff;
+            max-width: 100vw;
+            text-align: center;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+            background-color: #e8e8e8;
+            border-radius: 50%;
+            line-height: 80px;
+            font-size: 30px;
+            color: #555;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .form-group input {
+            width: 80%;
+            padding: 30px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .course-section {
+            margin-top: 20px;
+        }
+
+        .course {
+            background-color: #e8e8e8;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .course h3 {
+            margin: 0;
+        }
+
+        .course p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo">
+            EduWize
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter your password" required>
+            </div>
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+        <div class="course-section">
+            <div class="course">
+                <h3>Web Development</h3>
+                <p>This course covers HTML, CSS, and JavaScript to build dynamic and responsive websites.</p>
+            </div>
+            <div class="course">
+                <h3>Data Science</h3>
+                <p>Learn data analysis, visualization, and machine learning using Python and popular libraries.</p>
+            </div>
+            <div class="course">
+                <h3>Mobile App Development</h3>
+                <p>Create cross-platform mobile applications using frameworks like React Native and Flutter.</p>
+            </div>
+            <!-- Add more courses as needed -->
+        </div>
+    </div>
+</body>
+
+</html>
